@@ -18,8 +18,11 @@
 }
 
 .box {
-    position: relative;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 361px;
 }
 
 .circle{
@@ -31,14 +34,15 @@
     clip-path: circle(50% at bottom right);
     z-index: 0;
     position: absolute;
-
 }
 
 
 .container {
-  max-width: 3000px;
-  margin: 0 auto;
-  padding: 20px 40px;
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  width: 100%;
 }
 
 a {
@@ -46,15 +50,10 @@ a {
   text-decoration: none;
 }
 
-.nav-link {
-  list-style: none;
-  margin: 20px 0;
-  border-bottom: 2px solid var(--text);
-  width: 8rem;
-}
-
 /* Navbar */
 .navbar {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -67,6 +66,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .nav-toggle {
@@ -76,14 +76,29 @@ a {
   font-size: 1.5rem;
 }
 
-.nav-links {
-  height: 0;
-  overflow: hidden;
+.nav-links{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ position: absolute;
+ left: 0;
+ width: 100%;
+ margin-top: 20px;
+ padding: 0 20px;
+
+}
+.nav-link {
+  text-align: center;
+  list-style: none;
+  border-bottom: 1px solid var(--text);
+  width: 100%;
+  margin: 10px 0;
+}
+.hidden{
+  display: none !important;
 }
 
-.nav-open {
-  height: 100vh;
-}
 
 /*main*/
 h2 {
@@ -134,15 +149,35 @@ p{
     width: 80px;
 }
 
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.footer .box-footer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+ 
+}
+.footer .box-footer .btn-footer{
+  background-color: #444444;
+  width: 40px;
+  margin-left: 10px;
+}
+.box-footer .btn-footer img{
+  width: 100%;
+}
 
 
 /*responsive*/
 @media only screen and (min-width: 900px) {
 
 .container {
-  max-width: 3000px;
-  margin: 2em auto;
-  padding: 20px 40px;
+flex-direction: row;
 }
 
   .nav-toggle {
@@ -153,19 +188,9 @@ p{
     display: block;
   }
 
-  .flex-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-  }
-
   .nav-links {
-    height: auto;
-  }
-
-  ul {
-    text-align: center;
+  flex-direction: row;
+  position: relative;
   }
 
   .nav-link {
