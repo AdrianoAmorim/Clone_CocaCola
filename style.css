@@ -7,6 +7,7 @@
   --backround-menu: #121212f0;
   --text: #fff;
   --red: #e51e2a;
+  --red-btn-footer: #a00f18;
 }
 
 * {
@@ -32,7 +33,6 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  min-width: 361px;
 }
 
 .circle {
@@ -105,7 +105,7 @@ main {
   justify-content: start;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 main .iLike-main{
   display: flex;
@@ -115,19 +115,19 @@ main .iLike-main{
   flex: 1;
   width: 100%;
   padding: 10px;
+  margin-top: 2em;
   z-index: 1;
 }
 .iLike-main .text-iLike-main{
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  margin-bottom: 2em;
 }
 
 h2 {
   color: var(--text);
   text-transform: uppercase;
-  margin-top: 2em;
   font-size: 2em;
 
 }
@@ -142,7 +142,6 @@ h2 {
 p {
   color: #fff;
   text-align: center;
-  margin-bottom: 2em;
 }
 
 .button-ilike-main{
@@ -164,33 +163,33 @@ p {
   justify-content: center;
   flex: 1;
   width: 100%;
+  padding: 20px;
 }
+
 .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: end;
   z-index: 1;
-  position: relative;
-  background-color: transparent;
-  justify-content: right;
-
 }
-
+.imgs{
+  width: 100%;
+   min-width: 80px;
+}
 .img1 {
   transform: rotate(-15deg);
-  width: 80px;
 }
 
 .img2 {
   transform: rotate(5deg);
-  width: 80px;
 }
 
 .img3 {
   transform: rotate(15deg);
-  width: 80px;
 }
 
 .img4 {
   transform: rotate(-15deg);
-  width: 80px;
 }
 
 /*FOOTER*/
@@ -199,6 +198,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  z-index: 1;
 }
 
 .footer .box-footer {
@@ -228,7 +228,7 @@ p {
   object-fit: contain;
 }
 .footer .box-footer .btn-footer:hover,.box-footer .btn-footer:active{
-  background-color: var(--red);
+  background-color: var(--red-btn-footer);
 }
 
 /*responsive*/
