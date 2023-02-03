@@ -274,6 +274,7 @@ p {
 
   .container {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav-toggle {
@@ -287,19 +288,23 @@ p {
   .nav-links {
     flex-direction: row;
     position: relative;
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
   }
 
   .nav-link {
     display: inline-block;
     border-bottom: none;
     padding-left: 2em;
+    margin: 0 5px;
+    transition: all .2s ease-in;
   }
 
   .nav-link:hover {
     background: var(--red);
     padding: 10px;
     border-radius: 4px;
-    transition: 0.3s;
   }
 
   .hidden {
