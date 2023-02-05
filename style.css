@@ -224,7 +224,7 @@ p {
 
 .footer .box-footer {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 10px;
@@ -327,6 +327,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: start;
+    
   }
 
   main .iLike-main {
@@ -363,12 +364,17 @@ p {
   }
   
   .footer .box-footer{
-  padding-left: 25px;
+    justify-content: start;
+    padding-left: 25px;
   }
 
 }
 
 @media only screen and (min-width: 1140px) {
+
+    main {
+        height: 80vh;
+    }
  .box-img-main{
   margin-bottom: -79px;
  }
